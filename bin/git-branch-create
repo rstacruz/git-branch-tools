@@ -1,0 +1,6 @@
+#!/bin/sh
+
+branch=$1
+[ -z $branch ] && echo "Branch required." && exit 1
+
+git checkout --track -b $branch $remote/$branch

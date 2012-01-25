@@ -1,0 +1,10 @@
+#!/bin/sh
+
+branch=$1
+[ -z $branch ] && echo "Branch required." && exit 1
+
+remote=$2
+[ -z $remote ] && remote=origin
+
+git branch -D $branch
+git branch -d -r $remote/$branch && git push $remote :$branch

@@ -1,0 +1,11 @@
+#!/bin/sh
+# Checks out an existing remote branch.
+
+branch=$1
+[ -z $branch ] && echo "Branch required." && exit 1
+
+remote=$2
+[ -z $remote ] && remote=origin
+
+git fetch $remote $branch:$remote/$branch
+git checkout --track -b $branch $remote/$branch

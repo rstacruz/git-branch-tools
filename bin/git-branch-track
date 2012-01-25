@@ -1,0 +1,10 @@
+#!/bin/sh
+# Sets up tracking in a remote branch.
+
+branch="$(git symbolic-ref HEAD 2>/dev/null)" || (echo "You're not in a branch"; exit 1)
+branch=${branch##refs/heads/}
+
+remote=$1
+[ -z $remote ] && remote=origin
+
+git branch --set-upstream $branch $remote/$branch

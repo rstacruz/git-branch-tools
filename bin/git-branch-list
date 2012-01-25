@@ -1,0 +1,7 @@
+#!/bin/sh
+# Lists branch in a remote.
+
+remote=$1
+[ -z $remote ] && remote=origin
+
+git ls-remote --heads $remote
