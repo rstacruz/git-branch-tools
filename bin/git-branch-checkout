@@ -8,4 +8,4 @@ remote=$2
 [ -z $remote ] && remote=origin
 
 git fetch $remote $branch:$remote/$branch
-git checkout --track -b $branch $remote/$branch
+git checkout --track -b $branch refs/remotes/$remote/$branch

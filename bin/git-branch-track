@@ -7,4 +7,4 @@ branch=${branch##refs/heads/}
 remote=$1
 [ -z $remote ] && remote=origin
 
-git branch --set-upstream $branch $remote/$branch
+git branch --set-upstream $branch refs/remotes/$remote/$branch

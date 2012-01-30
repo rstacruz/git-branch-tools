@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# $ git submodule-add <repository> [<path>]
+#
+# Adds a submodule. Takes care of submodule init for you.
+# Uses same args as `git submodule add`.
+
+cd $(git rev-parse --show-toplevel)
+[ -f .gitmodules ] || git submodule init
+echo git submodule add $*
