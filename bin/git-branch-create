@@ -1,6 +1,13 @@
 #!/bin/sh
+#
+# $ git branch-create BRANCH [REMOTE]
+#
+# Creates a branch and sets up tracking on it's remote counterpart.
 
 branch=$1
 [ -z $branch ] && echo "Branch required." && exit 1
+
+remote=$2
+[ -z $remote ] && remote=origin
 
 git checkout --track -b $branch $remote/$branch

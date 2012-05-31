@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $ git branch-track [REMOTE]
+#
 # Sets up tracking in a remote branch.
 
 branch="$(git symbolic-ref HEAD 2>/dev/null)" || (echo "You're not in a branch"; exit 1)

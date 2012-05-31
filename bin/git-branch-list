@@ -1,5 +1,8 @@
 #!/bin/sh
-# Lists branch in a remote.
+#
+# $ git branch-list [REMOTE]
+#
+# Lists branches in a remote.
 
 remote=$1
 [ -z $remote ] && remote=origin

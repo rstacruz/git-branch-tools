@@ -1,4 +1,8 @@
 #!/bin/sh
+#
+# $ git branch-delete BRANCH [REMOTE]
+#
+# Deletes a branch locally and remotely.
 
 branch=$1
 [ -z $branch ] && echo "Branch required." && exit 1

@@ -1,4 +1,7 @@
 #!/bin/sh
+#
+# $ git branch-checkout BRANCH [REMOTE]
+#
 # Checks out an existing remote branch.
 
 branch=$1
